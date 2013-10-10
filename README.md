@@ -31,6 +31,8 @@ Ordo has been designed with the following goals in mind:
 
 For more information on LANGSEC, please check out [Occupy Babel][occupy]
 
+![Context Free Or Regular](http://www.cs.dartmouth.edu/~sergey/langsec/occupy/WeirdMachines.jpg)
+
 [langsec]: http://www.cs.dartmouth.edu/~sergey/langsec/
 [cfg]: https://en.wikipedia.org/wiki/Context-free_grammar
 [occupy]: http://www.cs.dartmouth.edu/~sergey/langsec/occupy/
