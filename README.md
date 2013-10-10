@@ -3,7 +3,14 @@
 Ordo is a data interchange format with the main intended use case of
 representing certificates and cryptographic keys.
 
-# Goals
+## Why?
+
+X.509 has a number of shortcomings, both in terms of usability and formal
+language theory. Ordo seeks to address these.
+
+We realize that reinventing the wheel can be unhelpful (cue [obligatory XKCD
+comic][standards-comic]) but we also feel like the wheels we're rolling on now
+may be somewhat misshapen.
 
 Ordo has been designed with the following goals in mind:
 
@@ -35,6 +42,7 @@ For more information on LANGSEC, please check out [Occupy Babel][occupy]:
 
 ![Context Free Or Regular](http://www.cs.dartmouth.edu/~sergey/langsec/occupy/WeirdMachines.jpg)
 
+[standards-comic]: http://xkcd.com/927/
 [langsec]: http://www.cs.dartmouth.edu/~sergey/langsec/
 [cfg]: https://en.wikipedia.org/wiki/Context-free_grammar
 [peg]: https://en.wikipedia.org/wiki/Parsing_expression_grammar
