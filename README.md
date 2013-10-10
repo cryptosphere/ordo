@@ -76,6 +76,7 @@ Some quick things to note:
   sorted in alphabetical order
 * Public keys and subjects are provided as URIs
 * Binary data is encoded using Base32
+* Spaces, not tabs. Trailing whitespace is not allowed.
 
 The `id-scheme` field allows us to compute a content hash which
 uniquely identifies this certificate. This particular cert has chosen
