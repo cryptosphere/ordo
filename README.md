@@ -28,13 +28,17 @@ Ordo has been designed with the following goals in mind:
   of formal language theory][langsec]. Ordo solves these concerns by describing
   the format in terms of a [context free grammar][cfg] which is unambiguous and
   should be possible to implement consistently everywhere from the description.
+  This project implements the Ordo format using a [Parsing Expression
+  Grammar][peg], specifically [kpeg][kpeg] by Evan Phoenix.
 
-For more information on LANGSEC, please check out [Occupy Babel][occupy]
+For more information on LANGSEC, please check out [Occupy Babel][occupy]:
 
 ![Context Free Or Regular](http://www.cs.dartmouth.edu/~sergey/langsec/occupy/WeirdMachines.jpg)
 
 [langsec]: http://www.cs.dartmouth.edu/~sergey/langsec/
 [cfg]: https://en.wikipedia.org/wiki/Context-free_grammar
+[peg]: https://en.wikipedia.org/wiki/Parsing_expression_grammar
+[kpeg]: https://github.com/evanphx/kpeg
 [occupy]: http://www.cs.dartmouth.edu/~sergey/langsec/occupy/
 
 ## Inspirations
