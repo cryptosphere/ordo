@@ -66,12 +66,16 @@ The following certificate represents a user with a Curve25519 public key:
 
 ```
 -----BEGIN ORDO CERTIFICATE BLOCK-----
-email: bascule@gmail.com
-id-scheme: ordo.id+blake2b
-public-key: ordo.public-key+curve25519:4uj6lwvvsx3bfl6novr36wdzl
-            r6uuovkkfrovmckd5uakwdlwiva
-subject: ordo.dn://c=US/ST=California/L=San+Francisco/O=Cryptosp
-         here+Foundation/OU=Certificate+Department/cn=Ordo
+email:
+  root@eruditorum.org
+public-key:
+  ordo.public-key+curve25519:4uj6lwvvsx3bfl6novr36wdzlr6uuovkkf
+  rovmckd5uakwdlwiva
+scheme:
+  ordo.id+blake2b
+subject:
+  ordo.dn:///C=US/ST=California/L=San+Francisco/O=Cryptosphere+
+  Foundation/OU=Certificate+Department/CN=Ordo
 -----END ORDO CERTIFICATE BLOCK-----
 ```
 
