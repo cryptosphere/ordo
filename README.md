@@ -1,4 +1,4 @@
-# ORDO (Ordered Representation for Disinguished Objects)
+# ORDO: Ordered Representation for Disinguished Objects
 
 ORDO is a data interchange format intended for representing certificates and
 cryptographic keys. We seek to achieve the following:
