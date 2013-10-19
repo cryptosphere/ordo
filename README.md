@@ -1,27 +1,36 @@
-# Ordo (Ordered Representation for Disinguished Objects)
+# ORDO (Ordered Representation for Disinguished Objects)
 
-Ordo is a data interchange format with the main intended use case of
-representing certificates and cryptographic keys.
+ORDO is a data interchange format intended for representing certificates and
+cryptographic keys. We seek to achieve the following:
 
-## Why?
+* Security
+* Human Readability
+* Ease of Use
+* Simplicity
+
+## The Case for a New Certificate Format
+
+Creating a new certificate format is not a task we undertake lightly. It's
+something we do as day-to-day users of X.509 certificates who strive to
+understand X.509's motivations and why the system exists as it is today.
 
 X.509 has a number of shortcomings, both in terms of usability and formal
-language theory. Ordo seeks to address these.
+language theory. ORDO seeks to address these.
 
 We realize that reinventing the wheel can be unhelpful (cue [obligatory XKCD
 comic][standards-comic]) but we also feel like the wheels we're rolling on now
 may be somewhat misshapen.
 
-Ordo has been designed with the following goals in mind:
+ORDO has been designed with the following goals in mind:
 
 * **Human-readable**: Documents can be read and written by humans without
   the need for special tools, so long as the grammar is adhered to. They should
   also be pleasant to read!
-* **Unambiguous**: Ordo seeks to actively identify any possible ambiguities in
+* **Unambiguous**: ORDO seeks to actively identify any possible ambiguities in
   the format and aggressively specify answers for what must and should be done
   depending on the context. The goal is a format which is strict and rigorous
   where all conforming implementations agree on all details of the format.
-* **Distinguished**: The structure of an Ordo document is exactingly described
+* **Distinguished**: The structure of an ORDO document is exactingly described
   in such a way that there is one and only one possible representation of
   a given set of data, such that tools given the same inputs to generate a
   certificate will always produce the same document every time in a fully
@@ -32,10 +41,10 @@ Ordo has been designed with the following goals in mind:
   combining certificates with private keys.
 * **LANGSEC friendly**: the most popular existing certificate format, X.509,
   was designed without a proper understanding of the [security applications
-  of formal language theory][langsec]. Ordo solves these concerns by describing
+  of formal language theory][langsec]. ORDO solves these concerns by describing
   the format in terms of a [context free grammar][cfg] which is unambiguous and
   should be possible to implement consistently everywhere from the description.
-  This project implements the Ordo format using a [Parsing Expression
+  This project implements the ORDO format using a [Parsing Expression
   Grammar][peg], specifically [kpeg][kpeg] by Evan Phoenix.
 
 For more information on LANGSEC, please check out [Occupy Babel][occupy]:
@@ -51,7 +60,7 @@ For more information on LANGSEC, please check out [Occupy Babel][occupy]:
 
 ## Inspirations
 
-Ordo is inspired by a number of sources:
+ORDO is inspired by a number of sources:
 
 * X.509
 * HTTP
@@ -75,7 +84,7 @@ scheme:
   ordo.id+blake2b
 subject:
   ordo.dn:///C=US/ST=California/L=San+Francisco/O=Cryptosphere+
-  Foundation/OU=Certificate+Department/CN=Ordo
+  Foundation/OU=Certificate+Department/CN=ORDO
 -----END ORDO CERTIFICATE BLOCK-----
 ```
 
