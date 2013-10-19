@@ -8,6 +8,11 @@ cryptographic keys. We seek to achieve the following:
 * Ease of Use
 * Simplicity
 
+ORDO is being used in the following projects:
+
+* [Confusion][https://github.com/cryptosphere/confusion/]
+* [Cryptosphere][https://github.com/cryptosphere/cryptosphere/]
+
 ## The Case for a New Certificate Format
 
 Creating a new certificate format is not a task we undertake lightly. It's
