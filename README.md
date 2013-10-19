@@ -10,8 +10,8 @@ cryptographic keys. We seek to achieve the following:
 
 ORDO is being used in the following projects:
 
-* [Confusion][https://github.com/cryptosphere/confusion/]
-* [Cryptosphere][https://github.com/cryptosphere/cryptosphere/]
+* [Confusion](https://github.com/cryptosphere/confusion/)
+* [Cryptosphere](https://github.com/cryptosphere/cryptosphere/)
 
 ## The Case for a New Certificate Format
 
