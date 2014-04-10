@@ -82,11 +82,11 @@ The following certificate represents a user with a Curve25519 public key:
 -----BEGIN ORDO CERTIFICATE BLOCK-----
 email:
   root@eruditorum.org
+expires:
+  2025-01-01T00:00:00Z
 public-key:
   ordo.public-key+curve25519:4uj6lwvvsx3bfl6novr36wdzlr6uuovkkf
   rovmckd5uakwdlwiva
-scheme:
-  ordo.id+blake2b
 subject:
   ordo.dn:///C=US/ST=California/L=San+Francisco/O=Cryptosphere+
   Foundation/OU=Certificate+Department/CN=ORDO
@@ -104,13 +104,12 @@ Some quick things to note:
 * Binary data is encoded using Base32
 * Spaces, not tabs. Trailing whitespace is not allowed.
 
-The `id-scheme` field allows us to compute a content hash which
-uniquely identifies this certificate. This particular cert has chosen
-to identify itself by its Blake2b hash. So its public ID is the
-following URI:
+We identify individual certificates using a content hashing scheme inspired
+by RFC6920 "Naming Things with Hashes". The following URI uniquely identifies
+this particular certificate:
 
 ```
-ordo.id+blake2b:lwxgjvaph2mode3zhrogwdhobuuaej4buc5nl6kbqiubshozocda
+ordo.id:///blake2b;lwxgjvaph2mode3zhrogwdhobuuaej4buc5nl6kbqiubshozocda
 ```
 
 This URI acts as a sort of universally unique identifier, and also
