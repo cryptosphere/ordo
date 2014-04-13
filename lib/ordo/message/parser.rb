@@ -4,6 +4,7 @@ require 'strscan'
 
 module ORDO
   class Message
+    # Parses valid ORDO messages
     class Parser
       attr_reader :version, :fields, :body
 
@@ -26,20 +27,18 @@ module ORDO
         self
       end
 
-      #######
       private
-      #######
 
       def parse_prefix
         header = @scanner.scan(/---ORDO MSG v/)
-        parse_error!("no ORDO MSG header") unless header
+        parse_error!('no ORDO MSG header') unless header
 
         version = @scanner.scan(/[0-9]/)
-        parse_error!("invalid version number") unless version
+        parse_error!('invalid version number') unless version
         @version = Integer(version, 10)
 
         header_rest = @scanner.scan(/---\r\n/)
-        parse_error!("invalid ORDO MSG header") unless header_rest
+        parse_error!('invalid ORDO MSG header') unless header_rest
 
         @line += 1
       end
@@ -47,7 +46,8 @@ module ORDO
       # From RFC 3986
       RESERVED_CHARACTERS   = /[!*'();:@&=+$,\/?#\[\]]/
       UNRESERVED_CHARACTERS = /[A-Za-z0-9\-_.~]/
-      HEADER_VALUE          = /(#{RESERVED_CHARACTERS}|#{UNRESERVED_CHARACTERS})*\r\n/
+
+      HEADER_VALUE = /(#{RESERVED_CHARACTERS}|#{UNRESERVED_CHARACTERS})*\r\n/
 
       def parse_field
         return parse_body if @scanner.scan(/\r\n/)
@@ -71,13 +71,13 @@ module ORDO
 
       def parse_error(message)
         buffer = @scanner.rest.split(/\r|\n/).first
-        buffer = "#{buffer[0,20]}..." if buffer.length > 20
+        buffer = "#{buffer[0, 20]}..." if buffer.length > 20
 
         ParseError.new("#{message} (line: #{@line}): #{buffer}")
       end
 
       def parse_error!(message)
-        raise parse_error(message)
+        fail parse_error(message)
       end
     end
   end
