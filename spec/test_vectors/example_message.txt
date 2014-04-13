@@ -1,0 +1,6 @@
+---ORDO MSG v0---
+Cipher: ordo.symmetric-encryption:///xsalsa20poly1305
+Content-Length: 34
+Content-Transfer-Encoding: binary
+
+Some things are better left unread

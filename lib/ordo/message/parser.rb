@@ -27,6 +27,10 @@ module ORDO
         self
       end
 
+      def to_ordo_message
+        Message.new(body, fields)
+      end
+
       private
 
       def parse_prefix
