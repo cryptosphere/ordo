@@ -30,7 +30,33 @@ describe ORDO::Message::Parser do
     parser.body.should eq example_body
   end
 
-  pending 'raises ParseError if no ORDO MSG header found'
+  it 'raises ParseError if no ORDO MSG header found' do
+    begin
+      subject.parse('garbage')
+    rescue ORDO::ParseError => ex # rubocop:disable all
+    end
 
-  pending 'raises ParseError if version is invalid'
+    expect(ex).to be_a ORDO::ParseError
+    expect(ex.to_s).to match(/no.*header/)
+  end
+
+  it 'raises ParseError if version is invalid' do
+    begin
+      subject.parse('---ORDO MSG vX---')
+    rescue ORDO::ParseError => ex # rubocop:disable all
+    end
+
+    expect(ex).to be_a ORDO::ParseError
+    expect(ex.to_s).to match(/invalid version/)
+  end
+
+  it 'raises ParseError if invalid fields are encountered' do
+    begin
+      subject.parse("---ORDO MSG v0---\r\nfoo: bar\r\n\r\n")
+    rescue ORDO::ParseError => ex # rubocop:disable all
+    end
+
+    expect(ex).to be_a ORDO::ParseError
+    expect(ex.to_s).to match(/invalid.*field name/)
+  end
 end
