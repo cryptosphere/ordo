@@ -20,14 +20,14 @@ describe ORDO::Message::Parser do
   it 'parses messages' do
     parser = subject.parse(example_message)
 
-    parser.version.should eq example_version
-    parser.fields.should eq(
+    expect(parser.version).to eq example_version
+    expect(parser.fields).to eq(
       'Cipher'                    => example_cipher,
       'Content-Length'            => example_body.length.to_s,
       'Content-Transfer-Encoding' => example_encoding
     )
 
-    parser.body.should eq example_body
+    expect(parser.body).to eq example_body
   end
 
   it 'raises ParseError if no ORDO MSG header found' do
