@@ -1,5 +1,5 @@
-require "ordo/version"
+require 'ordo/version'
+require 'ordo/message'
 
-module Ordo
-  # Your code goes here...
+module ORDO
 end
