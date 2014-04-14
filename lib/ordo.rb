@@ -1,4 +1,4 @@
-# encoding: utf-8
+# encoding: binary
 
 require 'ordo/version'
 require 'ordo/message'

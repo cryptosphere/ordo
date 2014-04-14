@@ -1,4 +1,4 @@
-# encoding: utf-8
+# encoding: binary
 
 # Ordered Representation of Distinguished Objects
 module ORDO
