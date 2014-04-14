@@ -1,4 +1,4 @@
-# encoding: binary
+# encoding: utf-8
 
 require 'spec_helper'
 

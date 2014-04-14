@@ -1,4 +1,4 @@
-# encoding: binary
+# encoding: utf-8
 
 require 'forwardable'
 require 'ordo/message/parser'
