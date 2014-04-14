@@ -1,5 +1,7 @@
 # ORDO: Ordered Representation for Disinguished Objects
 
+[![Build Status](https://travis-ci.org/cryptosphere/ordo.svg?branch=master)](https://travis-ci.org/cryptosphere/ordo)
+
 ORDO is a data interchange format intended for representing certificates and
 cryptographic keys. We seek to achieve the following:
 
