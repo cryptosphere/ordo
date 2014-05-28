@@ -12,6 +12,7 @@ cryptographic keys. We seek to achieve the following:
 
 ORDO is being used in the following projects:
 
+* [Cryptor](https://github.com/cryptosphere/cryptor/)
 * [Confusion](https://github.com/cryptosphere/confusion/)
 * [Cryptosphere](https://github.com/cryptosphere/cryptosphere/)
 
