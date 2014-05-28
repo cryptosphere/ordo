@@ -1,6 +1,10 @@
 # encoding: utf-8
 
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'json'
+require 'coveralls'
+Coveralls.wear!
+
+require 'bundler/setup'
 require 'ordo'
 
 def test_vector(name)
