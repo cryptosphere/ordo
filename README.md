@@ -3,7 +3,8 @@
 
 [![Build Status](https://travis-ci.org/cryptosphere/ordo.png?branch=master)](https://travis-ci.org/cryptosphere/ordo)
 [![Code Climate](https://codeclimate.com/github/cryptosphere/ordo.png)](https://codeclimate.com/github/cryptosphere/ordo)
-[![Coverage Status](https://coveralls.io/repos/cryptosphere/ordo/badge.png?branch=master)](https://coveralls.io/r/cryptosphere/ordo?branch=master)
+[![Coverage
+Status](https://coveralls.io/repos/cryptosphere/ordo/badge.png?branch=master)](https://coveralls.io/r/cryptosphere/ordo?branch=master)
 
 ORDO is a data interchange format intended for representing certificates and
 cryptographic keys. We seek to achieve the following:
