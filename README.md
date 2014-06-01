@@ -1,6 +1,7 @@
 ![ORDO: Ordered Representation for Distinguished Objects](https://raw.githubusercontent.com/cryptosphere/ordo/master/logo.png)
 =========================================================
 
+[![Gem Version](https://badge.fury.io/rb/ordo.png)](http://rubygems.org/gems/ordo)
 [![Build Status](https://travis-ci.org/cryptosphere/ordo.png?branch=master)](https://travis-ci.org/cryptosphere/ordo)
 [![Code Climate](https://codeclimate.com/github/cryptosphere/ordo.png)](https://codeclimate.com/github/cryptosphere/ordo)
 [![Coverage
