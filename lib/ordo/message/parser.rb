@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'strscan'
+require 'base64'
 
 module ORDO
   class Message
@@ -70,7 +71,14 @@ module ORDO
       end
 
       def parse_body
-        @body = @scanner.rest
+        raw_body = @scanner.rest
+        encoding = @fields['Content-Transfer-Encoding']
+
+        @body = case encoding
+                when 'base64' then Base64.strict_decode64(raw_body)
+                when 'binary', NilClass then raw_body
+                else fail ArgumentError, "invalid message encoding: #{encoding}"
+                end
       end
 
       def parse_error(message)

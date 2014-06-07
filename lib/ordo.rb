@@ -3,7 +3,7 @@
 require 'ordo/version'
 require 'ordo/message'
 
-# Ordered Representation of Distinguished Objects
+# Ordered Representation for Distinguished Objects
 module ORDO
   # Couldn't parse the given message
   ParseError = Class.new(StandardError)
